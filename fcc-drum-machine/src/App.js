@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import Box from './components/box';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	state = {
+		keys: ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'],
+	};
+	render() {
+		const { keys } = this.state;
+		return (
+			<div id='drum-machine'>
+				<div id='display'>
+					{keys.map((key, idx) => (
+						<Box text={key} key={idx} />
+					))}
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;
