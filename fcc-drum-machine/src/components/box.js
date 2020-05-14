@@ -1,5 +1,9 @@
 import React from 'react';
 
-const Box = (props) => <div className='box'>{props.text}</div>;
+class Box extends React.Component {
+	render() {
+		return <div className='box'>{this.props.text}</div>;
+	}
+}
 
 export default Box;
