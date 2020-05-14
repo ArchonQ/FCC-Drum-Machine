@@ -9,8 +9,8 @@ class App extends React.Component {
 	render() {
 		const { keys } = this.state;
 		return (
-			<div id='drum-machine'>
-				<div id='display'>
+			<div id='drum-machine' className='container'>
+				<div id='display' className='display'>
 					{keys.map((key, idx) => (
 						<Box text={key} key={idx} />
 					))}
