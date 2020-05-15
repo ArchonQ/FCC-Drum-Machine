@@ -46,6 +46,8 @@ document.addEventListener('keydown', (e) => {
 	const audio = document.getElementById(id);
 
 	if (audio) {
+		const parent = audio.parentNode;
+		parent.classList.add('active');
 		audio.play();
 	}
 });

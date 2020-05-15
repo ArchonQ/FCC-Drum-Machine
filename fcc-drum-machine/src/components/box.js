@@ -6,9 +6,17 @@ class Box extends React.Component {
 
 		this.audio = React.createRef();
 	}
+	componentDidMount() {
+		this.audio.current.addEventListener('ended', () => {
+			const parent = this.audio.current.parentNode;
+			parent.classList.remove('active');
+		});
+	}
 
 	playSound = () => {
 		this.audio.current.play();
+		const parent = this.audio.current.parentNode;
+		parent.classList.add('active');
 	};
 	render() {
 		const { text, audio } = this.props;
