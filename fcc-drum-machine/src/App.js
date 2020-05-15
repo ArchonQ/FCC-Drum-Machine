@@ -41,6 +41,15 @@ const sounds = [
 	},
 ];
 
+document.addEventListener('keydown', (e) => {
+	const id = e.key.toUpperCase();
+	const audio = document.getElementById(id);
+
+	if (audio) {
+		audio.play();
+	}
+});
+
 const App = () => (
 	<div id='drum-machine' className='container'>
 		<div id='display' className='display'>
