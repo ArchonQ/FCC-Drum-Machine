@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from './components/box';
+import DrumPad from './components/box';
 import './App.css';
 
 const sounds = [
@@ -46,8 +46,13 @@ document.addEventListener('keydown', (e) => {
 	const audio = document.getElementById(id);
 
 	if (audio) {
+		audio.currentTime = 0;
 		const parent = audio.parentNode;
 		parent.classList.add('active');
+
+		const display = parent.parentNode;
+		display.querySelector('h1').innerText = `${audio.id} is playing`;
+
 		audio.play();
 	}
 });
@@ -55,8 +60,9 @@ document.addEventListener('keydown', (e) => {
 const App = () => (
 	<div id='drum-machine' className='container'>
 		<div id='display' className='display'>
+			<h1>Play a sound</h1>
 			{sounds.map((sound, idx) => (
-				<Box text={sound.key} key={idx} audio={sound.mp3} />
+				<DrumPad text={sound.key} key={idx} audio={sound.mp3} />
 			))}
 		</div>
 	</div>
