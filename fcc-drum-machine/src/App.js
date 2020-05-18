@@ -60,7 +60,7 @@ document.addEventListener('keydown', (e) => {
 const App = () => (
 	<div id='drum-machine' className='container'>
 		<div id='display' className='display'>
-			<h1>Play a sound</h1>
+			<h1>Press or click a button</h1>
 			{sounds.map((sound, idx) => (
 				<DrumPad text={sound.key} key={idx} audio={sound.mp3} />
 			))}
