@@ -37,5 +37,3 @@ When I press the trigger key associated with each .drum-pad, the audio clip cont
 ### User Story #7:
 
 When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
-
-You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
