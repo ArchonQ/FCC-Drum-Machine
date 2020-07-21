@@ -37,3 +37,6 @@ When I press the trigger key associated with each .drum-pad, the audio clip cont
 ### User Story #7:
 
 When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
+
+Working site can be found here:
+https://quizzical-roentgen-f2931e.netlify.app/
